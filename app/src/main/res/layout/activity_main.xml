@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/target"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="TargetView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/aligned_to_fake_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:text="Aligned to fake guideline"
+        app:layout_constraintBottom_toTopOf="@+id/target"
+        app:layout_constraintLeft_toRightOf="@+id/fake_guideline"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/aligned_to_real_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:text="Aligned to real guideline"
+        app:layout_constraintLeft_toRightOf="@+id/real_guideline"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <View
+        android:id="@+id/fake_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dummy view"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="@+id/target"
+        app:layout_constraintRight_toRightOf="@+id/target"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText"
+        tools:layout_editor_absoluteY="234dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/real_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dummy view"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="@+id/target"
+        app:layout_constraintRight_toRightOf="@+id/target"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText"
+        tools:layout_editor_absoluteY="234dp" />
+
+</android.support.constraint.ConstraintLayout>
